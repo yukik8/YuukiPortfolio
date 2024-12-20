@@ -15,7 +15,7 @@
             <div class="photo-container" data-id="{{ photo.id }}" 
                  data-title="{{ photo.title }}" 
                  data-description="{{ photo.description }}">
-                <img src="{{ photo.url }}" alt="{{ photo.title }}" class="img-fluid">
+                <img src="{{ url_for('static', filename='uploads/' + photo.filename) }}" alt="{{ photo.title }}" class="img-fluid">
                 <div class="photo-overlay">
                     <h3>{{ photo.title }}</h3>
                     <p>{{ photo.description }}</p>
